@@ -24,6 +24,22 @@
         color: hsl(219, 9%, 45%);
         cursor: pointer;
         text-transform: capitalize;
+        position: relative;
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+        &:after {
+          transition: 0.3s ease;
+          left: 0;
+          position: absolute;
+          content: "";
+          bottom: -1px;
+          width: 0;
+          height: 1px;
+          background: hsl(220, 13%, 13%);
+        }
       }
     }
   }
